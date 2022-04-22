@@ -101,6 +101,7 @@ console.log(cate1)
 */
 
 //CODE HERE
+//what i did
 let pizza2 = {
     price: 5.99,
     popularity: 8.5,
@@ -108,6 +109,63 @@ let pizza2 = {
     rating: 8.0,
     tags: ['Pineapple', 'Ham', 'Personal Pizza']
 }
+
+//going over
+// const foodArr = [
+//     {
+//         name: "Pepperoni",
+    
+//         price: 3.99,
+    
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Fire"]
+//     },
+//     {
+//         name: "Vegan",
+//         price: 3.99,
+//         category: 
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Vegab"]
+//     },
+//     {
+//         name: "Pepperoni",
+    
+//         price: 3.99,
+    
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Fire"]
+//     },
+//     {
+//         name: "Pepperoni",
+    
+//         price: 3.99,
+    
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Fire"]
+//     },
+//     {
+//         name: "Pepperoni",
+    
+//         price: 3.99,
+    
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Fire"]
+//     },
+//     {
+//         name: "Pepperoni",
+    
+//         price: 3.99,
+    
+//         popularity: 1,
+//         rating: 4.5,
+//         tags: ["Popular", "Classic", "Fire"]
+//     },
+// ];
 
 
 
@@ -126,7 +184,13 @@ let pizza2 = {
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+ const filteredFood = foodArr.filter((food)) => {     //filter will be a boolean 
+    if(food.tags.includes("Delicious")) {     //checking if the pizza tag contains Delicious
+        return food;          //going to return delicious 
+
+    }
+ }
 
 
 
@@ -170,7 +234,17 @@ let pizza2 = {
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) {
+    const filterArray = foodArr.filter((food)) => {
+        if(type === 'above') {
+            return food[property] > number;
+        } else if(type === "below") {
+            return food[property] <= number;
+        }
+    })
 
+    return filterArray;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -180,3 +254,5 @@ let pizza2 = {
 */
 
 //CODE HERE
+
+console.log(filterByProperty("price", 3.00, "above"));
