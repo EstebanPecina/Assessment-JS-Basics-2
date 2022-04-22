@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza ={
+    name: 'Pepperoni Pizza',
+    price: 7.99,
+    category: 'Entree',
+    popularity: 9.5,
+    rating: 7,
+    tags: ['Kids Pizza','Vegan','Low Calories']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+// console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+pizza.price = 8.99
+// console.log(pizza.price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +81,11 @@
 */
 
 //CODE HERE
+let {category: cate1} = pizza;
+
+console.log(cate1)
+
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +101,14 @@
 */
 
 //CODE HERE
+let pizza2 = {
+    price: 5.99,
+    popularity: 8.5,
+    name: 'Pineapple Pizza',
+    rating: 8.0,
+    tags: ['Pineapple', 'Ham', 'Personal Pizza']
+}
+
 
 
 
